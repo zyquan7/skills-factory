@@ -1,0 +1,34 @@
+# ==============================================================================
+# Strict Allowlist: 仅提交 skills/ 与 README.md
+# ==============================================================================
+
+# 1. 默认忽略根目录下的一切文件与目录 (tests, tools, test_workspace, scratch 等全被屏蔽)
+/*
+
+# 2. 根目录白名单：仅允许 .gitignore 与 README.md
+!/.gitignore
+!/README.md
+!/README.MD
+!/readme.md
+
+# 3. 目录白名单：允许 skills 目录及其所有内容
+!/skills/
+!/skills/**
+
+# 4. 安全底线：严禁 skills/ 内部产生并提交任何测试产物与运行缓存
+skills/**/__pycache__/
+skills/**/*.py[cod]
+skills/**/$py.class
+skills/**/*.docx
+skills/**/*.doc
+skills/**/*.dotx
+skills/**/*.pdf
+skills/**/*.png
+skills/**/*.jpg
+skills/**/*.jpeg
+skills/**/*.gif
+skills/**/*.webp
+skills/**/*.tmp
+skills/**/*.temp
+skills/**/*.log
+skills/**/*.bak
